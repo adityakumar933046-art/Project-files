@@ -1,0 +1,18 @@
+##problem 4  unique number and statitics
+
+n= input("enter your number:")
+l = set(n)
+## unique digit set
+#print(l)
+b= len(l)
+print("total unique number:",b)
+total=0
+for i in l:
+    total+=int(i)
+print("sum of number:",total)
+avg = total/b
+print("avg of number:", avg)
+maximam = max(l)
+minimum = min(l)
+print("max num:", maximam)
+print("min num:",minimum)
