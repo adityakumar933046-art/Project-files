@@ -5,7 +5,7 @@ with open("marks.csv",'r') as f:
     r = csv.reader(f)
     for i in r:
         print(i)
-    
+    next(r)
     for _, name, subject, marks in r:
         marks = int(marks)
         if subject not in tops or marks > tops[subject][1]:
