@@ -1,0 +1,16 @@
+#problem no 1
+import csv
+tops = {}
+with open("marks.csv",'r') as f:
+    r = csv.reader(f)
+    for i in r:
+        print(i)
+    
+    for _, name, subject, marks in r:
+        marks = int(marks)
+        if subject not in tops or marks > tops[subject][1]:
+            tops[subject] = (name, marks)
+
+for sub, (name, marks) in tops.items():
+    print(f"{sub}:{name}({marks})")
+    print(" thanks for using my code")
