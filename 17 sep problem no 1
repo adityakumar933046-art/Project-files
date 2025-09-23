@@ -3,8 +3,6 @@ import csv
 tops = {}
 with open("marks.csv",'r') as f:
     r = csv.reader(f)
-    for i in r:
-        print(i)
     next(r)
     for _, name, subject, marks in r:
         marks = int(marks)
