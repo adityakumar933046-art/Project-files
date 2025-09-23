@@ -1,0 +1,15 @@
+### problem 2
+
+from collections import Counter
+import string
+
+text = open("story.txt").read().lower()
+text = text.translate(str.maketrans('', '', string.punctuation))
+words = text.split()
+
+counts = Counter(words)
+n = int(input("Enter minimum freq: "))
+
+for w, c in counts.most_common():
+    if c >= n:
+print(w, "→", c)
