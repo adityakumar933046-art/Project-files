@@ -1,0 +1,18 @@
+# Problem 3: Library Borrow Checker
+
+library = {'gita':7,'ramayan':10,'mahabharat':8,'economics':3,'quran':4,'bible':13}
+
+book = input("Enter book to borrow: ")
+
+if book in library:
+    if library[book] > 0:
+        library[book] -= 1
+        print(f"{book} issued successfully.")
+    else:
+        print("Out of stock")
+else:
+    print("Not found")
+
+with open("library.txt", "w") as f:
+    for title, qty in library.items():
+        f.write(f"{title},{qty}\n")
